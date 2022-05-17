@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Project</title>
+    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script> 
+</head>
+<body>
+    <!-- <h1>
+        !!!!!!!!!!!!!!!!! Mam i suck at drawing (project completed but animations are not working) :>>
+    </h1> -->
+    <a-scene background="color: #FAFAFA">
+      
+            <!-- camera -->
+            <a-entity position="0 2.4 5">
+                <a-camera></a-camera>
+            </a-entity>
+            
+
+            <!--i gave my best and spent a lot of my time testing and playing with animation component but cannot figure why its not working but i am totally clear on x y and z axis -->
+            <a-box position="0 4 0" rotation="0 0 0" color="#028AC5" >
+                
+                <a-sphere radius="0.122" position="-0.2 0.15 1" color="#FFF" >
+                    <a-sphere position="0.05 -0.03 1" radius="0.025" color="#000000" Animation="property:position; from:0.05 -0.03 1; to:0.05 -0.0.6 1; dir:alternate; loop:true; dur:1000;"/>
+                </a-sphere>
+            </a-box>
+            
+            <a-box position="0 4 0" rotation="0 0 0" color="#028AC5" shadow>
+                <a-sphere radius="0.122" position="0.2 0.15 1" color="#FFF">
+                    <a-sphere position="-0.05 -0.03 1" radius="0.025" color="#000000" Animation="property:position; from:0.05 -0.03 1; to:0.05 -0.0.6 1; dir:alternate; loop:true; dur:1000;"/>
+                </a-sphere>
+            </a-box>
+            
+            <!-- body -->
+            <a-entity geometry="primitive: circle; radius: 1;" material="thetaLength:180; color: #6c5ce7"  position="0 3 0" />
+
+            <!-- smile -->
+            <a-ring color="#fff" radius-inner="0.1" radius-outer="0.2" position="0 0.9 1" theta-length="180" rotation="0 0 180"></a-ring>
+
+            <!-- cone -->
+            <!-- head -->
+            <a-cone color="#00b894" radius-bottom="0.1" radius-top="0.3" rotation="0 0 180" position="0 2 0"></a-cone>
+
+            <!-- left hand -->
+            <a-cone color="#636e72" radius-bottom="0.1" radius-top="0.3" rotation="0 0 -90" position="-1.4 0.1 0" ></a-cone>
+
+            <!-- right hand -->
+            <a-cone color="#636e72" radius-bottom="0.1" radius-top="0.3" rotation="0 0 90" position="1.4 0.1 0" ></a-cone>
+
+            <!-- leg -->
+            <a-cone color="#FFAF01" radius-bottom="0.1" radius-top="0.3" rotation="0 0 360" position="0.05 -1.4 0" ></a-cone>
+
+    
+    </a-scene>
+    
+</body>
+</html>
